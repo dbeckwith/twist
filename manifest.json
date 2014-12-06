@@ -7,23 +7,19 @@
     [
         {
             "matches": ["http://www.reddit.com/r/*"],
-            "js": ["content_script_common.js", "content_script_reddit.js"],
-            "run_at": "document_end"
+            "js": ["content_script_common.js", "content_script_reddit.js"]
         },
         {
             "matches": ["http://www.huffingtonpost.com/*"],
-            "js": ["content_script_common.js", "content_script_huffingtonpost.js"],
-            "run_at": "document_end"
+            "js": ["content_script_common.js", "content_script_huffingtonpost.js"]
         },
         {
             "matches": ["http://www.lifehacker.com/*"],
-            "js": ["content_script_common.js", "content_script_lifehacker.js"],
-            "run_at": "document_end"
+            "js": ["content_script_common.js", "content_script_lifehacker.js"]
         },
         {
             "matches": ["https://twitter.com/*"],
-            "js": ["content_script_common.js", "content_script_twitter.js"],
-            "run_at": "document_end"
+            "js": ["content_script_common.js", "content_script_twitter.js"]
         }
     ],
     "browser_action": {
