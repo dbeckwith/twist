@@ -33,6 +33,11 @@
             "matches": ["https://twitter.com/*"],
             "js": ["content_script_twitter.js", "content_script_common.js"],
             "run_at": "document_end"
+        },
+        {
+            "matches":["http://*.9gag.com/*"],
+            "js":["content_script_9gag.js"],
+            "run_at":"document_end"
         }
     ],
     "browser_action": {
@@ -42,5 +47,8 @@
     "options_page": "settings.html",
     "permissions": [
         "storage"
+    ],
+    "web_accessible_resources":[
+    "r_u_serious.jpg"
     ]
 }
