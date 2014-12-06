@@ -1,3 +1,7 @@
+function setStudyChance(value){
+    chrome.storage.sync.set("study_chance", value,null);
+}
+
 function saveText() {
     var knowledge = document.getElementById("knowledgeTextArea").value;
     chrome.storage.sync.set({
