@@ -37,8 +37,8 @@ function getTextSample(length) {
 
     for (var i = 0; i < matches.length && i < length; i++) {
         text += matches[i].trim() + " ";
+        currentPos += matches[i].length;
     }
-    currentPos += text.length;
     if (currentPos >= knowledgeText.length) currentPos = 0;
 
     chrome.storage.sync.set({
