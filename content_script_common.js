@@ -33,7 +33,7 @@ function getTextSample(length) {
         return null;
 
     for (var i = 0; i < matches.length && i < length; i++) {
-        text += matches[i];
+        text += matches[i].trim() + " ";
     }
 
     currentPos = (currentPos + text.length) % knowledgeText.length;
