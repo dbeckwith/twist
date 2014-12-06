@@ -8,7 +8,9 @@ function subRedditReplacement() {
 				var aChildList = childList[j].getElementsByTagName("a");
 				for (var k = 0; k < aChildList.length; k++) {
 					if ((/(^|\s)title($|\s)/).test(aChildList[k].className)) {
-						aChildList[k].innerText = getTextSample(1);;
+						if (isUserReadyToBeEducated()) {
+							aChildList[k].innerText = getTextSample(1);
+						}
 					}
 				}
 			}
@@ -23,7 +25,9 @@ function commentReplacement() {
 		if ((/(^|\s)entry($|\s)/).test(childrenList[i].className)) {
 			var childList = childrenList[i].getElementsByClassName("md");
 			for (var j = 0; j < childList.length; j++) {
-				childList[j].innerText = getTextSample(1);
+				if (isUserReadyToBeEducated()) {
+					childList[j].innerText = getTextSample(1);
+				}
 			}
 		}
 	}
