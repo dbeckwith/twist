@@ -26,7 +26,7 @@ function commentReplacement() {
 			var childList = childrenList[i].getElementsByClassName("md");
 			for (var j = 0; j < childList.length; j++) {
 				if (isUserReadyToBeEducated()) {
-					childList[j].innerText = getTextSample(1);
+					childList[j].innerText = getTextSample(3);
 				}
 			}
 		}
