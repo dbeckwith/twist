@@ -43,7 +43,7 @@ function getTextSample(length) {
 
     chrome.storage.sync.set({
         "currentPos": currentPos
-    }, function() {});
+    }, null);
 
     console.log("sample: "+text);
     return text;
