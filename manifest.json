@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "TWIST",
+    "version": "1.0",
+    "description": "Time Waster Internet Study Tool",
+    "content_scripts": 
+    [
+        {
+            "matches": ["http://www.reddit.com/r/hardwareswap/*"],
+            "js": ["content_script.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions":
+    [
+        "http://www.heatware.com/",
+        "http://heatware.com/"
+    ]
+}
