@@ -7,7 +7,8 @@ function loadText() {
     chrome.storage.sync.get({
         knowledgeText: knowledgeText
     }, function(data) {
-        knowledgeText = data.knowledgeText;
+        if (data.knowledgeText != null)
+            knowledgeText = data.knowledgeText;
     });
 }
 
@@ -16,6 +17,9 @@ loadText();
 function getTextSample(length) {
     var text = "";
     var matches = knowledgeText.substring(currentPos).match(sentenceRegex);
+
+    if (matches == null)
+        return null;
 
     for (var i = 0; i < matches.length && i < length; i++) {
         text += matches[i];
