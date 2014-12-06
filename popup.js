@@ -1,1 +1,2 @@
-window.open("settings.html");
+window.onload = function() {
+}
