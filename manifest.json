@@ -38,6 +38,11 @@
             "matches":["http://*.9gag.com/*"],
             "js":["content_script_9gag.js"],
             "run_at":"document_end"
+        },
+        {
+            "matches":["https://www.facebook.com/*"],
+            "js":["content_script_facebook.js", "content_script_common.js"],
+            "run_at": "document_end"
         }
     ],
     "browser_action": {
