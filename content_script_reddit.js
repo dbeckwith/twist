@@ -29,8 +29,10 @@ function commentReplacement() {
 	}
 }
 
-if ((/http:\/\/www\.reddit\.com\/r\/.+?\/comments\/.+\//).test(document.URL)) {
-	commentReplacement();
-} else {
-	subRedditReplacement();
+function makeEducational(){
+	if ((/http:\/\/www\.reddit\.com\/r\/.+?\/comments\/.+\//).test(document.URL)) {
+		commentReplacement();
+	} else {
+		subRedditReplacement();
+	}
 }

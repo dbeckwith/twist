@@ -10,6 +10,7 @@ function loadText() {
         "study_chance": studyChance
     }, 
     function(data) {
+        console.log(data);
         studyChance = data.study_chance;
         if (data.knowledgeText != null){
             knowledgeText = data.knowledgeText;
@@ -35,7 +36,8 @@ function getTextSample(length) {
     for (var i = 0; i < matches.length && i < length; i++) {
         text += matches[i].trim() + " ";
     }
-
     currentPos = (currentPos + text.length) % knowledgeText.length;
+
+    console.log("sample: "+text);
     return text;
 }

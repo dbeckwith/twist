@@ -1,6 +1,7 @@
 window.onload = function() {
 
     chrome.storage.sync.get("study_chance",function(value){
+    	document.getElementById("study_slider").value = Math.floor(value.study_chance*100);
     	document.getElementById("percent_label").innerHTML = Math.floor(value.study_chance*100)+"%";
     });
 
