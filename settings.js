@@ -22,7 +22,7 @@ function loadText() {
     chrome.storage.sync.get({
         knowledgeText: "[none]"
     }, function(data) {
-        document.getElementById("loadedText").innerHTML = "Saved text: " + data.knowledgeText;
+        document.getElementById("knowledgeTextArea").value = data.knowledgeText;
     });
 }
 
