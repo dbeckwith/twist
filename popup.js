@@ -9,6 +9,7 @@ window.onload = function() {
     });
 
     document.getElementById("study_slider").addEventListener("change", studySliderChanged, false);
+    document.getElementById("study_slider").addEventListener("input", studySliderChanged, false);
 }
 
 function studySliderChanged(){
