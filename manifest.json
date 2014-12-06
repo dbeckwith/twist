@@ -21,7 +21,7 @@
             "run_at": "document_end"
         },
         {
-            "matches": ["http://www.twitter.com/*"],
+            "matches": ["https://twitter.com/*"],
             "js": ["content_script_common.js", "content_script_twitter.js"],
             "run_at": "document_end"
         }
