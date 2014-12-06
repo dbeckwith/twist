@@ -7,7 +7,8 @@ function loadText() {
     chrome.storage.sync.get(
     {
         "knowledgeText": knowledgeText,
-        "study_chance": studyChance
+        "study_chance": studyChance,
+        "currentPos": currentPos
     }, 
     function(data) {
         console.log(data);
@@ -15,6 +16,7 @@ function loadText() {
         if (data.knowledgeText != null){
             knowledgeText = data.knowledgeText;
         }
+        currentPos = data.currentPos;
         makeEducational();
     });
 }
@@ -38,6 +40,10 @@ function getTextSample(length) {
     }
     currentPos += text.length;
     if (currentPos >= knowledgeText.length) currentPos = 0;
+
+    chrome.storage.sync.set({
+        "currentPos": currentPos
+    }, function() {});
 
     console.log("sample: "+text);
     return text;
