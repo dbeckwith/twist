@@ -54,6 +54,6 @@
         "storage"
     ],
     "web_accessible_resources":[
-    "r_u_serious.jpg"
+        "img/r_u_serious.jpg"
     ]
 }

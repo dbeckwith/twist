@@ -10,6 +10,6 @@ function makeEducational() {
     }
 
     for (var i = 0; i < tweets.length; i++) if (isUserReadyToBeEducated()) {
-        tweets[i].innerText = getTextSample(3);
+        tweets[i].innerText = getTextSample(2);
     }
 }
