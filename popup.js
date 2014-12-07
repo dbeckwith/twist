@@ -4,8 +4,10 @@ window.onload = function() {
     	if(isNaN(value.study_chance)){
     		value.study_chance = 0.25;
     	}
-    	document.getElementById("study_slider").value = Math.floor(value.study_chance*100);
-    	document.getElementById("percent_label").innerHTML = Math.floor(value.study_chance*100)+"%";
+        value = Math.floor(value.study_chance*100);
+    	document.getElementById("study_slider").value = value;
+    	document.getElementById("percent_label").innerHTML = value+"%";
+        document.getElementById("logo-img").src = "img/logo/logo" + value + ".png";
     });
 
     document.getElementById("study_slider").addEventListener("change", studySliderChanged, false);
