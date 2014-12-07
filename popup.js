@@ -12,8 +12,9 @@ window.onload = function() {
     document.getElementById("study_slider").addEventListener("input", studySliderChanged, false);
 }
 
-function studySliderChanged(){
+function studySliderChanged() {
 	var value = document.getElementById("study_slider").value;
-	    chrome.storage.sync.set({"study_chance":value/100},null);
+    chrome.storage.sync.set({"study_chance":value/100},null);
     document.getElementById("percent_label").innerHTML = value+"%";
+    document.getElementById("logo-img").src = "img/logo/logo" + value + ".png";
 }
