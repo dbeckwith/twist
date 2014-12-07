@@ -3,14 +3,15 @@ function setStudyChance(value){
 }
 
 function saveText() {
-    var knowledge = document.getElementById("knowledgeTextArea").value;
+    var knowledge = document.getElementById("knowledgeTextArea").value.replace(/\n/gm, " ");
     if (knowledge.trim() == "") {
         document.getElementById("saveError").innerHTML = "Text cannot be blank!";
             setTimeout(function() { document.getElementById("saveError").innerHTML = ""; }, 2000);
     }
     else {
         chrome.storage.sync.set({
-            knowledgeText: knowledge
+            "knowledgeText": knowledge,
+            "currentPos": 0
         }, function() {
             document.getElementById("saveStatus").innerHTML = "Options Saved!";
             setTimeout(function() { document.getElementById("saveStatus").innerHTML = ""; }, 2000);
@@ -20,7 +21,7 @@ function saveText() {
 
 function loadText() {
     chrome.storage.sync.get({
-        knowledgeText: "[none]"
+        "knowledgeText": "[none]"
     }, function(data) {
         document.getElementById("knowledgeTextArea").value = data.knowledgeText;
     });
