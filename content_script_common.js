@@ -18,6 +18,10 @@ function loadText() {
         }
         currentPos = data.currentPos;
         makeEducational();
+
+        chrome.storage.sync.set({
+            "currentPos": currentPos
+        }, null);
     });
 }
 
@@ -40,10 +44,6 @@ function getTextSample(length) {
         currentPos += matches[i].length;
     }
     if (currentPos >= knowledgeText.length) currentPos = 0;
-
-    chrome.storage.sync.set({
-        "currentPos": currentPos
-    }, null);
 
     console.log("sample: "+text);
     return text;

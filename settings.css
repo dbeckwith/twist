@@ -1,6 +1,14 @@
 body {
-    background-color: #000;
+    background-color: #2B180E;
     color: #AAA;
+}
+
+a {
+    color: #0F0;
+}
+
+a:hover {
+    color: #AFA;
 }
 
 #mainbody {
