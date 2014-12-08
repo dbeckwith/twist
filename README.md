@@ -2,6 +2,7 @@ TWIST
 =====
 
 Time Waster Internet Study Tool for WPI ACM Hackathon Dec. 2014
+- Winner of "Most Humorous" title
 
 This is a tool that replaces text on typical time-wasting websites with more productive information provided by the user. Very useful for getting your life back on track.
 
